@@ -1,4 +1,4 @@
-package br.ufpb.dcx.jefferson;
+package br.ufpb.dcx.jefferson.busca.sequencial;
 
 public class BuscaSequencialMain {
     public static void main(String[] args) {
