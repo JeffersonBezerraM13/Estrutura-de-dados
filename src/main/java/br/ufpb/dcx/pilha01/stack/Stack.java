@@ -1,10 +1,10 @@
-package pilha01;
+package br.ufpb.dcx.pilha01.stack;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * A classe <tt>Stack</tt> representa uma pilha de itens genéricos que segue a política LIFO.
+ * A classe <tt>br.ufpb.dcx.jefferson.Stack</tt> representa uma pilha de itens genéricos que segue a política LIFO.
  * Ela suporta operações de <em>push</em> e <em>pop</em>, além de métodos para verificar o item no topo,
  * testar se a pilha está vazia e iterar sobre os itens na ordem LIFO.
  * <p>
@@ -68,7 +68,7 @@ public class Stack<Item> implements Iterable<Item> {
      * Lança uma exceção se a pilha estiver vazia.
      */
     public Item pop() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) throw new NoSuchElementException("br.ufpb.dcx.jefferson.Stack underflow");
         Item item = first.item; // salva o item para retornar
         first = first.next; // remove o primeiro nó
         n--;
@@ -80,7 +80,7 @@ public class Stack<Item> implements Iterable<Item> {
      * Lança uma exceção se a pilha estiver vazia.
      */
     public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        if (isEmpty()) throw new NoSuchElementException("br.ufpb.dcx.jefferson.Stack underflow");
         return first.item;
     }
 
@@ -128,10 +128,10 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     /**
-     * Testes unitários para o tipo de dados <tt>Stack</tt>.
+     * Testes unitários para o tipo de dados <tt>br.ufpb.dcx.jefferson.Stack</tt>.
      */
     public static void main(String[] args) {
-        Stack<String> stack = new Stack<String>();
+        Stack<String> stack = new Stack<>();
         while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
             if (!item.equals("-"))

@@ -1,10 +1,11 @@
-package br.ufpb.dcx.jefferson.pilhaComVetores;
+package br.ufpb.dcx.jefferson;
 
-import pilha01.StdIn;
-import pilha01.StdOut;
+import br.ufpb.dcx.std.StdIn;
+import br.ufpb.dcx.std.StdOut;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
+
 
 public class StackString implements Iterator<String>{
     //Conjunto dinâmico = quantidade de dados guardados muda com o tempo
@@ -50,12 +51,13 @@ public class StackString implements Iterator<String>{
         }
         this.s = novoArray;
     }
-    void empilharRedimensionar(String str){ //push do slide
-        if(s.length == topo){
+    public void empilharRedimensionar(String novoStr){//push do slide
+        if(topo == s.length){
             redimensionar(s.length*2);
         }
-        s[topo] = str;
+        this.s[topo] = novoStr;
         topo++;
+
     }
 
     public String pop(){
@@ -108,13 +110,12 @@ public class StackString implements Iterator<String>{
             } else if (!stack.vazio()) { //se caso a pilha esteja não vazia...
                 StdOut.print(stack.pop()+" "); //print cada string com o "Pop" e um espaço ( ).
             }
-            StdOut.println("(" + stack.size() + " sobraram na pilha"); // no final diga quantos str sobraram na pilha
-
             //Explicação: Pilha é lifo (first in last out)
             //ou seja, se eu colocar um nome e tira ele esse mesmo nome saíra
             // se eu botar dois nome (Jefferson e Isabela) e da um "Pop" saíra apenas isabela (foi o ultimo nome a ser colocado)
             // entrada do terminal "Jeffeson Isabela Davi DaviFrancisco - - - Eduardo"
             // a saída deverá ser "Jefferson Eduardo"
         }
+        StdOut.println("(" + stack.size() + " sobraram na pilha)"); // no final diga quantos str sobraram na pilha
     }
 }

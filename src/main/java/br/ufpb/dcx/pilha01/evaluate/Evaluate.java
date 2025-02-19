@@ -1,20 +1,16 @@
-package evaluate;
-
-import pilha01.Stack;
-import pilha01.StdIn;
-import pilha01.StdOut;
+package br.ufpb.dcx.pilha01.evaluate;
 
 /****************************
- * Compilation: java Evaluate.java
- * Execution: java Evaluate
- * Dependencies: Stack.java
+ * Compilation: java br.ufpb.dcx.pilha01.evaluate.Evaluate.java
+ * Execution: java br.ufpb.dcx.pilha01.evaluate.Evaluate
+ * Dependencies: br.ufpb.dcx.jefferson.Stack.java
  *
  *
- * % java Evaluate
+ * % java br.ufpb.dcx.pilha01.evaluate.Evaluate
  * ( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )
  * 101.0
  *
- * % java Evaluate
+ * % java br.ufpb.dcx.pilha01.evaluate.Evaluate
  * ( ( 1 + sqrt ( 5 ) ) / 2.0 )
  * 1.618033988749895
  *
@@ -23,7 +19,7 @@ import pilha01.StdOut;
  *
  * Remarkably, Dijkstra's algorithm computes the same answer if we put each operator *after* its two operands instead of *between* them.
  *
- * % java Evaluate
+ * % java br.ufpb.dcx.pilha01.evaluate.Evaluate
  * ( 1 ( ( 2 3 + ) ( 4 5 * ) * ) +
  * 101.0
  *

@@ -1,4 +1,4 @@
-package br.ufpb.dcx.jefferson.busca.sequencial;
+package br.ufpb.dcx.jefferson;
 
 public class BuscaSequencialMain {
     public static void main(String[] args) {
@@ -7,11 +7,11 @@ public class BuscaSequencialMain {
         for (int i = 0; i < inteiros.length; i++) inteiros[i] += i + 1;
         for (int i = 0; i < inteiros.length; i++) System.out.println("indx:" + i + " -> " + inteiros[i]);
         //Usando a busca Sequancial
-        System.out.println(buscaSequencial(inteiros, 8));
+        StdOut.println(buscaSequencial(inteiros, 8));
         //Usando a busca binária
-        System.out.println(buscaBinária(inteiros, 8));
+        StdOut.println(buscaBinária(inteiros, 8));
         //Usando a busca binária recursiva
-        System.out.println(buscaBinariaRecuriva(inteiros,8,0,inteiros.length));
+        StdOut.println(buscaBinariaRecuriva(inteiros,8,0,inteiros.length));
 
     }
     //Slide "pesquisa em memória" página 5-6
