@@ -1,4 +1,4 @@
-package br.ufpb.dcx.std; /******************************************************************************
+package br.ufpb.dcx.jefferson; /******************************************************************************
  *  Compilation:  javac StdIn.java
  *  Execution:    java StdIn   (interactive test of basic functionality)
  *  Dependencies: none

@@ -1,4 +1,4 @@
-package br.ufpb.dcx.std; /******************************************************************************
+package br.ufpb.dcx.jefferson; /******************************************************************************
  *  Compilation:  javac StdOut.java
  *  Execution:    java StdOut
  *  Dependencies: none

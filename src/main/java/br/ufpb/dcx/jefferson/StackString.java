@@ -1,8 +1,5 @@
 package br.ufpb.dcx.jefferson;
 
-import br.ufpb.dcx.std.StdIn;
-import br.ufpb.dcx.std.StdOut;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

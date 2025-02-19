@@ -1,4 +1,4 @@
-package br.ufpb.dcx.pilha01.stack;
+package br.ufpb.dcx.jefferson;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
