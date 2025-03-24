@@ -32,8 +32,8 @@ package br.ufpb.dcx.jefferson;
 
 public class Evaluate {
     public static void main(String[] args) {
-        Stack<String> ops = new Stack<String>();
-        Stack<Double> vals = new Stack<Double>();
+        Stack<String> ops = new Stack<>();
+        Stack<Double> vals = new Stack<>();
 
         while (!StdIn.isEmpty()) {
             String s = StdIn.readString();
