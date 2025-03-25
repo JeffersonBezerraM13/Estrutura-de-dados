@@ -11,27 +11,20 @@ public class ListaDuplamenteEncadeada<T> {
         this.tamanho = 0;
     }
 
-    // Verifica se a lista está vazia
-    public boolean estaVazia() {
-        return tamanho == 0;
-    }
-
-    // Retorna o tamanho da lista
     public int getTamanho() {
         return tamanho;
     }
 
-    // Adiciona um elemento no início da lista
-    public void adicionarNoInicio(T elemento) {
+    public void adicionar(T elemento) {
         NoDuplo<T> novoNo = new NoDuplo<>(elemento);
 
         if (this.tamanho == 0) {
             cabeca = novoNo;
             cauda = novoNo;
         } else {
-            novoNo.setProximo(cabeca);
-            cabeca.setAnterior(novoNo);
-            cabeca = novoNo;
+            this.cauda.setProximo(novoNo);
+            novoNo.setAnterior(this.cauda);
+            this.cauda = novoNo;
         }
         tamanho++;
     }
@@ -40,7 +33,7 @@ public class ListaDuplamenteEncadeada<T> {
     public void adicionarNoFinal(T elemento) {
         NoDuplo<T> novoNo = new NoDuplo<>(elemento);
 
-        if (estaVazia()) {
+        if (this.tamanho == 0) {
             cabeca = novoNo;
             cauda = novoNo;
         } else {
@@ -58,7 +51,7 @@ public class ListaDuplamenteEncadeada<T> {
         }
 
         if (posicao == 0) {
-            adicionarNoInicio(elemento);
+            adicionar(elemento);
         } else if (posicao == tamanho) {
             adicionarNoFinal(elemento);
         } else {
@@ -77,7 +70,7 @@ public class ListaDuplamenteEncadeada<T> {
 
     // Remove o primeiro elemento da lista
     public T removerDoInicio() {
-        if (estaVazia()) {
+        if (this.tamanho == 0) {
             throw new RuntimeException("Lista vazia");
         }
 
@@ -96,7 +89,7 @@ public class ListaDuplamenteEncadeada<T> {
 
     // Remove o último elemento da lista
     public T removerDoFinal() {
-        if (estaVazia()) {
+        if (this.tamanho == 0) {
             throw new RuntimeException("Lista vazia");
         }
 
@@ -190,7 +183,7 @@ public class ListaDuplamenteEncadeada<T> {
     // Retorna a representação da lista como String
     @Override
     public String toString() {
-        if (estaVazia()) {
+        if (this.tamanho == 0) {
             return "[]";
         }
 
@@ -211,7 +204,7 @@ public class ListaDuplamenteEncadeada<T> {
 
     // Retorna a representação da lista como String em ordem reversa
     public String toStringReverso() {
-        if (estaVazia()) {
+        if (this.tamanho == 0) {
             return "[]";
         }
 

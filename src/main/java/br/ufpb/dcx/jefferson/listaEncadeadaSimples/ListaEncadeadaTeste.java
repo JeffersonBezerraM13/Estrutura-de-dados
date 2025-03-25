@@ -12,16 +12,23 @@ public class ListaEncadeadaTeste {
         lista.adicionaNoComeco(4);
         lista.adicionaNoFim(5);
 
-        //lista.imprimirRecursivo();
+        lista.imprimirRecursivo();
 
         lista.imprimirRecursivoFinal();
         System.out.println(contagem(lista,2));
         System.out.println(lista.getNth(7));
 
+        lista.retirarDoComeco();
+        lista.retirarDoComeco();
+
+
+
+        System.out.println(lista);
+
     }
     public static int contagem(ListaEncadeadaSimples<Integer> lista, int a){
         int quantContagem = 0;
-        No<Integer> atual = lista.getInicio();
+        No<Integer> atual = lista.getCabeca();
         while (atual != null){
             if(atual.getElemento().equals(a)){
                 quantContagem++;
