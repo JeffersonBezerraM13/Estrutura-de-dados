@@ -20,12 +20,11 @@ public class ListaDuplamenteEncadeada<T> {
 
         if (this.tamanho == 0) {
             cabeca = novoNo;
-            cauda = novoNo;
         } else {
             this.cauda.setProximo(novoNo);
             novoNo.setAnterior(this.cauda);
-            this.cauda = novoNo;
         }
+        cauda = novoNo;
         tamanho++;
     }
 
@@ -35,12 +34,11 @@ public class ListaDuplamenteEncadeada<T> {
 
         if (this.tamanho == 0) {
             cabeca = novoNo;
-            cauda = novoNo;
         } else {
             novoNo.setAnterior(cauda);
             cauda.setProximo(novoNo);
-            cauda = novoNo;
         }
+        cauda = novoNo;
         tamanho++;
     }
 
